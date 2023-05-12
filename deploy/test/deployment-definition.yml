@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: __NAMESPACE__
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: __APP_NAME__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: __APP_NAME__
+  template:
+    metadata:
+      labels:
+        app: __APP_NAME__
+    spec:
+      containers:
+      - name: __APP_NAME__
+        image: __DOCKER_SERVER__/__GCLOUD_PROJECT_ID__/__APP_NAME__:__CI_COMMIT_SHORT_SHA__
+        imagePullPolicy: "Always"
+        envFrom:
+          - configMapRef:
+              name: __APP_NAME__
+        ports:
+        - containerPort: 8080

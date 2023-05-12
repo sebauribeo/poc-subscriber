@@ -1,0 +1,26 @@
+{
+    "attributes":{
+        "eventId": "05a1c531-6733-4b98-8410-9dbb3ea416f6",
+        "eventType": "fileCreated",
+        "entityId": "1",
+        "entityType": "file",
+        "timestamp": "1526395872",
+        "datetime": "2021-04-01T08:56:33Z",
+        "version": "string",
+        "country": "CL",
+        "commerce": "Falabella",
+        "channel": "string",
+        "domain": "string",
+        "capability": "string",
+        "mimeType": "application/json",
+        "source": "DEV"
+    },
+    "data": {
+        "sku": "12345",
+        "producto": "test",
+        "tipo": "test",
+        "stock": "test",
+        "imagen": "test",
+        "precio": "test"
+    }
+}
